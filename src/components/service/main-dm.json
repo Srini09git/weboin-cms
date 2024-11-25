@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_service_main_dms",
+  "info": {
+    "displayName": "MainDm",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subheading": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ContentTitle": {
+      "type": "string"
+    },
+    "Buttontext": {
+      "type": "string"
+    },
+    "service_datum": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::service-data.service-data"
+    },
+    "Para": {
+      "type": "component",
+      "repeatable": true,
+      "component": "para.paragraph"
+    }
+  }
+}

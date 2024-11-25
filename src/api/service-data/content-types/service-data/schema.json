@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_datas",
+  "info": {
+    "singularName": "service-data",
+    "pluralName": "service-datas",
+    "displayName": "Service",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "secdm": {
+      "type": "component",
+      "repeatable": true,
+      "component": "service.sec-dm"
+    },
+    "maindm": {
+      "type": "component",
+      "repeatable": true,
+      "component": "service.main-dm"
+    },
+    "testimonial": {
+      "type": "component",
+      "repeatable": true,
+      "component": "service.testimonial"
+    },
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "service.title"
+    },
+    "getintouch": {
+      "type": "component",
+      "repeatable": false,
+      "component": "service.getintouch"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_service_testimonials",
+  "info": {
+    "displayName": "Testimonial",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "quote": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "service_data": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service-data.service-data"
+    }
+  }
+}

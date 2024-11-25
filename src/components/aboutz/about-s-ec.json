@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_aboutz_about_s_ecs",
+  "info": {
+    "displayName": "AboutSEc",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "heelo": {
+      "type": "string"
+    }
+  }
+}

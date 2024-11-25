@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_portfolio_maincontents",
+  "info": {
+    "displayName": "Maincontent"
+  },
+  "options": {},
+  "attributes": {
+    "mobileImg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "pcimg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Header": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "text"
+    },
+    "Buttontext": {
+      "type": "string"
+    },
+    "year": {
+      "type": "biginteger"
+    },
+    "closebtn": {
+      "type": "string"
+    }
+  }
+}

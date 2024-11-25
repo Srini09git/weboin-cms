@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_aboutz_mohanas",
+  "info": {
+    "displayName": "mohana"
+  },
+  "options": {},
+  "attributes": {
+    "Mohanapriya": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "jjj": {
+      "type": "text"
+    }
+  }
+}

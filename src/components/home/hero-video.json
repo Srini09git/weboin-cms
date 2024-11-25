@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_home_hero_videos",
+  "info": {
+    "displayName": "HERO VIDEO",
+    "icon": "arrowDown"
+  },
+  "options": {},
+  "attributes": {
+    "uhj": {
+      "type": "blocks"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_home_hero_mains",
+  "info": {
+    "displayName": "HERO MAIN",
+    "icon": "arrowDown",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "text"
+    }
+  }
+}

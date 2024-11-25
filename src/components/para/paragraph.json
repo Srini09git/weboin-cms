@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_para_paragraphs",
+  "info": {
+    "displayName": "Paragraph",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Para": {
+      "type": "blocks"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service-data.service-data"
+    }
+  }
+}
