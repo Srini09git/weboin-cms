@@ -12,9 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "ContactForm": {
+    "ContactDetails": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
+      "component": "contact.contact-details"
+    },
+    "InputCreation": {
+      "type": "component",
+      "repeatable": false,
       "component": "contact.contact-form"
     }
   }

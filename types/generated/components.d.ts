@@ -1,5 +1,21 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface PortfolioMaincontent extends Schema.Component {
+  collectionName: 'components_portfolio_maincontents';
+  info: {
+    displayName: 'Maincontent';
+  };
+  attributes: {
+    mobileImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    pcimg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Header: Attribute.String;
+    paragraph: Attribute.Text;
+    Buttontext: Attribute.String;
+    year: Attribute.BigInteger;
+    closebtn: Attribute.String;
+  };
+}
+
 export interface ServiceTitle extends Schema.Component {
   collectionName: 'components_service_titles';
   info: {
@@ -99,69 +115,54 @@ export interface ParaParagraph extends Schema.Component {
   };
 }
 
-export interface PortfolioMaincontent extends Schema.Component {
-  collectionName: 'components_portfolio_maincontents';
+export interface HomeHerosection extends Schema.Component {
+  collectionName: 'components_home_herosections';
   info: {
-    displayName: 'Maincontent';
-  };
-  attributes: {
-    mobileImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    pcimg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    Header: Attribute.String;
-    paragraph: Attribute.Text;
-    Buttontext: Attribute.String;
-    year: Attribute.BigInteger;
-    closebtn: Attribute.String;
-  };
-}
-
-export interface HomeOurSponcer extends Schema.Component {
-  collectionName: 'components_home_our_sponcers';
-  info: {
-    displayName: 'OurSponcer';
-  };
-  attributes: {
-    Title: Attribute.String;
-    Description: Attribute.Text;
-    Icons: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-  };
-}
-
-export interface HomeHeroVideo extends Schema.Component {
-  collectionName: 'components_home_hero_videos';
-  info: {
-    displayName: 'HERO VIDEO';
-    icon: 'arrowDown';
-  };
-  attributes: {
-    uhj: Attribute.Blocks;
-  };
-}
-
-export interface HomeHeroMain extends Schema.Component {
-  collectionName: 'components_home_hero_mains';
-  info: {
-    displayName: 'HERO MAIN';
-    icon: 'arrowDown';
+    displayName: 'Herosection';
     description: '';
   };
   attributes: {
-    Title: Attribute.String;
-    Content: Attribute.Text;
+    Herotitle: Attribute.String;
+    Heropara: Attribute.Text;
+    herobackgroundleft: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    herobackgroundright: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    herocard1: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    herocard2Main: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    herocard2OOutline: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    herocard3: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
 export interface ContactContactForm extends Schema.Component {
   collectionName: 'components_contact_contact_forms';
   info: {
-    displayName: 'ContactForm';
+    displayName: 'ContactInput';
     description: '';
+  };
+  attributes: {
+    InputCreation: Attribute.JSON;
+  };
+}
+
+export interface ContactContactDetails extends Schema.Component {
+  collectionName: 'components_contact_contact_details';
+  info: {
+    displayName: 'ContactDetails';
   };
   attributes: {
     label: Attribute.String;
     name: Attribute.String;
-    type: Attribute.String;
-    required: Attribute.String;
+    email: Attribute.Email;
+    phone: Attribute.BigInteger;
+    subject: Attribute.String;
+    service: Attribute.String;
+    message: Attribute.String;
   };
 }
 
@@ -190,17 +191,16 @@ export interface AboutzAboutSEc extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'portfolio.maincontent': PortfolioMaincontent;
       'service.title': ServiceTitle;
       'service.testimonial': ServiceTestimonial;
       'service.sec-dm': ServiceSecDm;
       'service.main-dm': ServiceMainDm;
       'service.getintouch': ServiceGetintouch;
       'para.paragraph': ParaParagraph;
-      'portfolio.maincontent': PortfolioMaincontent;
-      'home.our-sponcer': HomeOurSponcer;
-      'home.hero-video': HomeHeroVideo;
-      'home.hero-main': HomeHeroMain;
+      'home.herosection': HomeHerosection;
       'contact.contact-form': ContactContactForm;
+      'contact.contact-details': ContactContactDetails;
       'aboutz.mohana': AboutzMohana;
       'aboutz.about-s-ec': AboutzAboutSEc;
     }

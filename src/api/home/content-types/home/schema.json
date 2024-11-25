@@ -12,15 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "hero": {
+    "herosection": {
       "type": "component",
       "repeatable": false,
-      "component": "home.hero-main"
-    },
-    "OurSponcer": {
-      "type": "component",
-      "repeatable": false,
-      "component": "home.our-sponcer"
+      "component": "home.herosection"
     }
   }
 }

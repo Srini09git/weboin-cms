@@ -800,7 +800,8 @@ export interface ApiContactContact extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    ContactForm: Attribute.Component<'contact.contact-form', true>;
+    ContactDetails: Attribute.Component<'contact.contact-details'>;
+    InputCreation: Attribute.Component<'contact.contact-form'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -812,6 +813,43 @@ export interface ApiContactContact extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::contact.contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiContactDetailContactDetail extends Schema.CollectionType {
+  collectionName: 'contact_details';
+  info: {
+    singularName: 'contact-detail';
+    pluralName: 'contact-details';
+    displayName: 'ContactDetail';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    label: Attribute.String;
+    name: Attribute.String;
+    email: Attribute.Email;
+    phone: Attribute.BigInteger;
+    subject: Attribute.String;
+    message: Attribute.String;
+    service: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact-detail.contact-detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact-detail.contact-detail',
       'oneToOne',
       'admin::user'
     > &
@@ -831,8 +869,7 @@ export interface ApiHomeHome extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    hero: Attribute.Component<'home.hero-main'>;
-    OurSponcer: Attribute.Component<'home.our-sponcer'>;
+    herosection: Attribute.Component<'home.herosection'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -927,6 +964,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::contact.contact': ApiContactContact;
+      'api::contact-detail.contact-detail': ApiContactDetailContactDetail;
       'api::home.home': ApiHomeHome;
       'api::portfolio.portfolio': ApiPortfolioPortfolio;
       'api::service-data.service-data': ApiServiceDataServiceData;
